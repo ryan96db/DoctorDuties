@@ -116,12 +116,6 @@ public:
 //Problem 1 Part A
 int validAbsenceRequest(AbsenceRequest request) {
 
-        time_t now = time (0); //store current time
-
-        struct tm timeinfo = *localtime(&now);
-
-        int hour = timeinfo.tm_hour;
-
         if ((request.getAbsentHour() + request.getAbsentDuration()) > 23)
         {
             return 1; //Error
